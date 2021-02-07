@@ -29,6 +29,11 @@ public class ImageChartResource {
         return imageChartService.getImageChartById(id);
     }
 
+    @PostMapping
+    public ImageChart addNew(@RequestBody ImageChart imageChart) {
+        return imageChartService.addNewImageChart(imageChart);
+    }
+
     @PutMapping
     public ImageChart updateImageChart(@RequestBody ImageChart imageChart) {
         return imageChartService.updateImageChart(imageChart);
